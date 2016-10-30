@@ -411,20 +411,6 @@
         clearCursor();
         window.APP.output.push(data);
         appendContent(convertToHtml(data));
-        addPromptLine();
-    });
-
-    socket.on("username", function () {
-        clearCursor();
-        channel = "username";
-        appendContent("<br/>username: ");
-        addNewLine();
-    });
-
-    socket.on("password", function () {
-        clearCursor();
-        channel = "password";
-        appendContent("password: ");
         addNewLine();
     });
 
